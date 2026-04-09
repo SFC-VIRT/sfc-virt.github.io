@@ -71,7 +71,7 @@ const topics = [
     },
     {
         icon: null,
-        name: "Media over QUIC",
+        name: "Secure Virtual Partitioning and Provisioning of SmartNICs in Multi-tenant IaaS",
         text: null,
     },
 ]
