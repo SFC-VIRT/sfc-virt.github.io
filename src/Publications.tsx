@@ -1,11 +1,4 @@
 import {
-    Accordion,
-    AccordionButton,
-    AccordionIcon,
-    AccordionItem,
-    AccordionPanel,
-    Box,
-    Heading,
     Highlight,
     Link,
     ListItem,
@@ -75,65 +68,17 @@ const linkIcon = (url: string) => {
 }
 
 export const Publications = (props: {en: boolean}) => {
-    const papersList: JSX.Element[] = []
-    const presentationsList: JSX.Element[] = []
-    const activitiesList: JSX.Element[] = []
-    let key = 0
     const rules: string[] = createRules()
-    Array.prototype.forEach.call(publications.papers, (element) => {
-        papersList.push(
-            <ListItem key={key}>
-                {linkIcon(element.url)}
-                <Highlight
-                    query={rules}
-                    styles={{
-                        px: "0.5",
-                        py: "0.5",
-                        bg: "orange.100",
-                    }}
-                >
-                    {props.en ? element.en : element.ja}
-                </Highlight>
-            </ListItem>
-        )
-        key++
-    })
-    Array.prototype.forEach.call(publications.presentations, (element) => {
-        presentationsList.push(
-            <ListItem key={key}>
-                {linkIcon(element.url)}
-                <Highlight
-                    query={rules}
-                    styles={{
-                        px: "0.5",
-                        py: "0.5",
-                        bg: "orange.100",
-                    }}
-                >
-                    {props.en ? element.en : element.ja}
-                </Highlight>
-            </ListItem>
-        )
-        key++
-    })
-    Array.prototype.forEach.call(publications.activities, (element) => {
-        activitiesList.push(
-            <ListItem key={key}>
-                {element.url ? (
-                    <Link href={element.url}>
-                        <Highlight
-                            query={rules}
-                            styles={{
-                                px: "0.5",
-                                py: "0.5",
-                                bg: "orange.100",
-                            }}
-                        >
-                            {props.en ? element.en : element.ja}
-                        </Highlight>
-                        <AiOutlineLink style={style.iconEnd}></AiOutlineLink>
-                    </Link>
-                ) : (
+    const allEntries = [
+        ...publications.papers,
+        ...publications.presentations,
+        ...publications.activities,
+    ]
+
+    const allList = allEntries.map((element, index) => (
+        <ListItem key={index}>
+            {element.url ? (
+                <Link href={element.url}>
                     <Highlight
                         query={rules}
                         styles={{
@@ -144,56 +89,22 @@ export const Publications = (props: {en: boolean}) => {
                     >
                         {props.en ? element.en : element.ja}
                     </Highlight>
-                )}
-            </ListItem>
-        )
-        key++
-    })
-    return (
-        <Accordion allowMultiple>
-            <AccordionItem>
-                <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                        <Heading as="h3" fontSize="3xl">
-                            {props.en
-                                ? "Publication(peer-reviewed)"
-                                : "論文(査読有り)"}
-                        </Heading>
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel pb={4}>
-                    <UnorderedList>{papersList}</UnorderedList>
-                </AccordionPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                        <Heading as="h3" fontSize="3xl">
-                            {props.en
-                                ? "Public presentation"
-                                : "その他発表など"}
-                        </Heading>
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel pb={4}>
-                    <UnorderedList>{presentationsList}</UnorderedList>
-                </AccordionPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                        <Heading as="h3" fontSize="3xl">
-                            {props.en ? "Activity" : "その他活動など"}
-                        </Heading>
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel pb={4}>
-                    <UnorderedList>{activitiesList}</UnorderedList>
-                </AccordionPanel>
-            </AccordionItem>
-        </Accordion>
-    )
+                    <AiOutlineLink style={style.iconEnd}></AiOutlineLink>
+                </Link>
+            ) : (
+                <Highlight
+                    query={rules}
+                    styles={{
+                        px: "0.5",
+                        py: "0.5",
+                        bg: "orange.100",
+                    }}
+                >
+                    {props.en ? element.en : element.ja}
+                </Highlight>
+            )}
+        </ListItem>
+    ))
+
+    return <UnorderedList>{allList}</UnorderedList>
 }
