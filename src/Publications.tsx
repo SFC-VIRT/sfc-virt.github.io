@@ -10,11 +10,6 @@ import {normalized_members as members} from "./data/members"
 import {AiOutlineLink} from "react-icons/ai"
 
 const style: {[key: string]: React.CSSProperties} = {
-    icon: {
-        display: "inline-block",
-        verticalAlign: "sub",
-        marginRight: "10px",
-    },
     iconEnd: {
         display: "inline-block",
         marginLeft: "0.2rem",
@@ -57,15 +52,6 @@ const createRules = () => {
     return rules
 }
 
-const linkIcon = (url: string) => {
-    if (url) {
-        return (
-            <Link href={url}>
-                <AiOutlineLink style={style.icon}></AiOutlineLink>
-            </Link>
-        )
-    }
-}
 
 export const Publications = (props: {en: boolean}) => {
     const rules: string[] = createRules()
