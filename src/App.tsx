@@ -56,7 +56,7 @@ const style: {[key: string]: React.CSSProperties} = {
 const topics = [
     {
         icon: null,
-        name: "Low-Latency IP Video Transmission",
+        name: "A9N: Describing Microkernel with High-speed IPC in An Architecture Agnostic Manner",
         text: null,
     },
     {
