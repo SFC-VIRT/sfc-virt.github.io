@@ -19,7 +19,6 @@ export type MemberEntry = {
 export type MembersJson = {
     faculties: MemberEntry[]
     students: MemberEntry[]
-    alumniAndAlumnae?: MemberEntry[]
 }
 
 // explicitly cast to MembersJson to satisfy TS compiler
@@ -28,6 +27,5 @@ const members = raw_members as unknown as MembersJson
 export const normalized_members = {
     faculties: members.faculties ?? [],
     students: members.students ?? [],
-    alumniAndAlumnae: members.alumniAndAlumnae ?? [],
 } as const
 

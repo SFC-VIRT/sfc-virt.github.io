@@ -65,10 +65,6 @@ export const Members = (props: {en: boolean}) => {
         .filter((e) => e.list)
         .map((e, index) => <Member key={index} data={e} en={props.en} />)
 
-    const alumni_and_alumnae_list = normalized_members.alumniAndAlumnae
-        .filter((e) => e.list)
-        .map((e, index) => <Member key={index} data={e} en={props.en} />)
-
     return (
         <Box>
             <Box marginY="4">
@@ -83,13 +79,6 @@ export const Members = (props: {en: boolean}) => {
                     {props.en ? "Students" : "学生"}
                 </Heading>
                 <UnorderedList>{students_list}</UnorderedList>
-            </Box>
-
-            <Box marginY="4">
-                <Heading as="h3" fontSize="3xl" marginBottom="2">
-                    {props.en ? "Alumni and Alumnae" : "卒業生"}
-                </Heading>
-                <UnorderedList>{alumni_and_alumnae_list}</UnorderedList>
             </Box>
         </Box>
     )
