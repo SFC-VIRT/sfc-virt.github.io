@@ -47,6 +47,16 @@
         {
             "list": true,
             "icon": "",
+            "name": "奥村 天音",
+            "name_en": "Amane Okumura",
+            "url": "",
+            "login": "ann",
+            "grade": "B3",
+            "grade_en": "B3"
+        },
+        {
+            "list": true,
+            "icon": "",
             "name": "伊組 烈火",
             "name_en": "Rekka Igumi",
             "url": "",
