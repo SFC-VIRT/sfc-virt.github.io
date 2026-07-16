@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VIRT - SFC-RG</title>
-<meta name="description" content="VIRT は慶應義塾大学 SFC の仮想化技術に関する研究グループです。">
+<meta name="description" content="VIRT is a research group on virtualization technology at Keio University SFC.">
 <link rel="icon" href="favicon.ico">
+<style>
+[lang="ja"], [lang="en"] { display: none; }
+html[data-lang="ja"] [lang="ja"] { display: revert; }
+html[data-lang="en"] [lang="en"] { display: revert; }
+</style>
 </head>
 <body>
 
+<p>
+<button type="button" onclick="setLang('en')">English</button>
+<button type="button" onclick="setLang('ja')">日本語</button>
+</p>
+
 <h1>VIRT (SFC-RG)</h1>
 
-<h2>VIRT について</h2>
-<p>
+<h2><span lang="en">About VIRT</span><span lang="ja">VIRT について</span></h2>
+<p lang="en">
+Virt is a research team dedicated to advancing virtual machine infrastructure, the foundation of modern cloud computing.
+Our work spans from hypervisors to hardware accelerators, tackling challenges across the full stack of virtualization.
+</p>
+<p lang="ja">
 Virt は、現代のクラウドコンピューティングの基盤である仮想マシンインフラストラクチャの発展に取り組む研究チームです。
 ハイパーバイザからハードウェアアクセラレータまで、仮想化のフルスタックにわたる課題に挑戦しています。
 </p>
 
-<h2>研究トピック</h2>
+<h2><span lang="en">Research topics</span><span lang="ja">研究トピック</span></h2>
 <ul>
 <li>A9N: Describing Microkernel with High-speed IPC in An Architecture Agnostic Manner</li>
 <li>Fast Virtual Machine Live Migration in Environments with Significantly Low CPU Cache Hit Rates</li>
@@ -25,48 +39,63 @@ Virt は、現代のクラウドコンピューティングの基盤である仮
 <li>Secure Virtual Partitioning and Provisioning of SmartNICs in Multi-tenant IaaS</li>
 </ul>
 
-<h2>メンバー</h2>
-<h3>教員</h3>
+<h2><span lang="en">Members</span><span lang="ja">メンバー</span></h2>
+<h3><span lang="en">Faculty</span><span lang="ja">教員</span></h3>
 <ul>
-<li>松谷 健史（特任講師）</li>
+<li><span lang="en">Takeshi Matsuya (Project Assistant Professor)</span><span lang="ja">松谷 健史（特任講師）</span></li>
 </ul>
-<h3>学生</h3>
+<h3><span lang="en">Students</span><span lang="ja">学生</span></h3>
 <ul>
-<li>上田 侑真（D1）</li>
-<li>納本 穂高（B4）</li>
-<li>磯 亮太（B4）</li>
-<li>奥村 天音（B3）</li>
-<li>伊組 烈火（B1）</li>
-<li>佐古 萌奈（B1）</li>
-</ul>
-
-<h2>論文、発表、活動等</h2>
-<ul>
-<li>上田侑真，"A Study on a Method for Accelerating Pre-Copy VM Live Migration by Dynamic Skipping of Zero Page Detection"，WIDE研究会，名古屋国際センター，2024/03/05-07</li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/koubo/career/2024/2024-supercreator-14.html">2025/05/29: 伊組烈火が2024年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</a></li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/koubokekka.html">2024/06/25: 伊組烈火が2024年度未踏IT人材発掘・育成事業に採択されました</a></li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2023/supercreator.html">2024/06/03: 今村翔太が2023年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</a></li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2023/koubokekka.html">2023/06/19: 今村翔太が2023年度未踏IT人材発掘・育成事業に採択されました</a></li>
-<li><a href="https://www.meti.go.jp/english/press/2023/0526_003.html">2023/05/27: 飯田圭祐と柚山大哉が2022年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</a></li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2022/koubokekka.html">2022/06/20: 飯田圭祐と柚山大哉が2022年度未踏IT人材発掘・育成事業に採択されました</a></li>
-<li><a href="https://www.meti.go.jp/english/press/2021/0528_003.html">2021/06/28: 上田侑真が2020年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</a></li>
-<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2020/koubokekka.html">2020/06/26: 上田侑真が2020年度未踏IT人材発掘・育成事業に採択されました</a></li>
+<li><span lang="en">Yuma Ueda (D1)</span><span lang="ja">上田 侑真（D1）</span></li>
+<li><span lang="en">Hotaka Okumoto (B4)</span><span lang="ja">納本 穂高（B4）</span></li>
+<li><span lang="en">Ryota Iso (B4)</span><span lang="ja">磯 亮太（B4）</span></li>
+<li><span lang="en">Amane Okumura (B3)</span><span lang="ja">奥村 天音（B3）</span></li>
+<li><span lang="en">Rekka Igumi (B1)</span><span lang="ja">伊組 烈火（B1）</span></li>
+<li><span lang="en">Mona Sako (B1)</span><span lang="ja">佐古 萌奈（B1）</span></li>
 </ul>
 
-<h2>連絡先</h2>
-<p>
+<h2><span lang="en">Publication, Presentation, Activity</span><span lang="ja">論文、発表、活動等</span></h2>
+<ul>
+<li>
+<span lang="en">Yuma Ueda, "A Study on a Method for Accelerating Pre-Copy VM Live Migration by Dynamic Skipping of Zero Page Detection", WIDE Meeting, Nagoya International Center, 2024/03/05-07</span>
+<span lang="ja">上田侑真，"A Study on a Method for Accelerating Pre-Copy VM Live Migration by Dynamic Skipping of Zero Page Detection"，WIDE研究会，名古屋国際センター，2024/03/05-07</span>
+</li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/koubo/career/2024/2024-supercreator-14.html"><span lang="en">2025/05/29: Rekka Igumi was certified as a Super Creator of the MITOU Program.</span><span lang="ja">2025/05/29: 伊組烈火が2024年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</span></a></li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/koubokekka.html"><span lang="en">2024/06/25: Rekka Igumi qualified for MITOU Program.</span><span lang="ja">2024/06/25: 伊組烈火が2024年度未踏IT人材発掘・育成事業に採択されました</span></a></li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2023/supercreator.html"><span lang="en">2024/06/03: Shota Imamura was certified as a Super Creator of the MITOU Program.</span><span lang="ja">2024/06/03: 今村翔太が2023年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</span></a></li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2023/koubokekka.html"><span lang="en">2023/06/19: Shota Imamura qualified for MITOU Program.</span><span lang="ja">2023/06/19: 今村翔太が2023年度未踏IT人材発掘・育成事業に採択されました</span></a></li>
+<li><a href="https://www.meti.go.jp/english/press/2023/0526_003.html"><span lang="en">2023/05/27: Daiya Yuyama and Keisuke Iida were certified as Super Creators of the MITOU Program.</span><span lang="ja">2023/05/27: 飯田圭祐と柚山大哉が2022年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</span></a></li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2022/koubokekka.html"><span lang="en">2022/06/20: Daiya Yuyama and Keisuke Iida qualified for MITOU Program.</span><span lang="ja">2022/06/20: 飯田圭祐と柚山大哉が2022年度未踏IT人材発掘・育成事業に採択されました</span></a></li>
+<li><a href="https://www.meti.go.jp/english/press/2021/0528_003.html"><span lang="en">2021/06/28: Yuma Ueda was certified as a Super Creator of the MITOU Program.</span><span lang="ja">2021/06/28: 上田侑真が2020年度未踏IT人材発掘・育成事業においてスーパークリエータに認定されました</span></a></li>
+<li><a href="https://www.ipa.go.jp/jinzai/mitou/it/2020/koubokekka.html"><span lang="en">2020/06/26: Yuma Ueda qualified for MITOU Program.</span><span lang="ja">2020/06/26: 上田侑真が2020年度未踏IT人材発掘・育成事業に採択されました</span></a></li>
+</ul>
+
+<h2><span lang="en">Contact us</span><span lang="ja">連絡先</span></h2>
+<p lang="en">
+If you are interested in VIRT's activities, please contact us at <a href="mailto:virt@sfc.wide.ad.jp">virt@sfc.wide.ad.jp</a>.
+</p>
+<p lang="ja">
 VIRT の活動についてご質問のある方は、<a href="mailto:virt@sfc.wide.ad.jp">virt@sfc.wide.ad.jp</a> までメールをください。
 </p>
 
-<h2>関連リンク</h2>
+<h2><span lang="en">Related links</span><span lang="ja">関連リンク</span></h2>
 <ul>
-<li><a href="https://www.sfc.keio.ac.jp/">慶應義塾大学湘南藤沢キャンパス</a></li>
-<li><a href="https://rg.sfc.keio.ac.jp/">楠本・高汐・バンミーター・植原・三次・中澤・大越 合同研究プロジェクト</a></li>
+<li><a href="https://www.sfc.keio.ac.jp/"><span lang="en">Keio University Shonan Fujisawa Campus</span><span lang="ja">慶應義塾大学湘南藤沢キャンパス</span></a></li>
+<li><a href="https://rg.sfc.keio.ac.jp/"><span lang="en">Kusumoto/Takashio/Van Meter/Uehara/Mitsugi/Nakazawa/Okoshi Joint Research Project</span><span lang="ja">楠本・高汐・バンミーター・植原・三次・中澤・大越 合同研究プロジェクト</span></a></li>
 <li><a href="https://www.wide.ad.jp/">WIDE Project</a></li>
 </ul>
 
 <hr>
 <p>© VIRT, SFC-RG</p>
+
+<script>
+function setLang(lang) {
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+setLang(localStorage.getItem("lang") || "en");
+</script>
 
 </body>
 </html>
